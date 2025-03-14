@@ -45,4 +45,26 @@ final class ExampleTest extends TestCase
 
         $this->assertEquals(true, $integerValue);
     }
+
+    /**
+     * @test
+     */
+    public function isNotFizz(){
+        $example = new Example();
+
+        $integerValue = $example->fizzChecker(1);
+
+        $this->assertFalse($integerValue);
+    }
+
+    /**
+     * @test
+     */
+    public function isFizz(){
+        $example = new Example();
+
+        $integerValue = $example->fizzChecker(3);
+
+        $this->assertTrue($integerValue);
+    }
 }
