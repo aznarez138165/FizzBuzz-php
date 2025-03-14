@@ -49,7 +49,7 @@ final class ExampleTest extends TestCase
     /**
      * @test
      */
-    public function isNotFizz(){
+    public function isNotFizzDivisibleBy3(){
         $example = new Example();
 
         $integerValue = $example->fizzChecker(1);
@@ -60,7 +60,7 @@ final class ExampleTest extends TestCase
     /**
      * @test
      */
-    public function isFizz(){
+    public function isFizzDivisibleBy3(){
         $example = new Example();
 
         $integerValue = $example->fizzChecker(3);
@@ -71,7 +71,7 @@ final class ExampleTest extends TestCase
     /**
      * @test
      */
-    public function isNotBuzz(){
+    public function isNotBuzzDivisibleBy5(){
         $example = new Example();
 
         $integerValue = $example->buzzChecker(1);
@@ -82,7 +82,7 @@ final class ExampleTest extends TestCase
     /**
      * @test
      */
-    public function isBuzz(){
+    public function isBuzzDivisibleBy5(){
         $example = new Example();
 
         $integerValue = $example->buzzChecker(5);
