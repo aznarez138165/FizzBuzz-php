@@ -67,4 +67,26 @@ final class ExampleTest extends TestCase
 
         $this->assertTrue($integerValue);
     }
+
+    /**
+     * @test
+     */
+    public function isNotBuzz(){
+        $example = new Example();
+
+        $integerValue = $example->buzzChecker(1);
+
+        $this->assertFalse($integerValue);
+    }
+
+    /**
+     * @test
+     */
+    public function isBuzz(){
+        $example = new Example();
+
+        $integerValue = $example->buzzChecker(5);
+
+        $this->assertTrue($integerValue);
+    }
 }
