@@ -20,7 +20,7 @@ final class FizzBuzzTest extends TestCase
     /**
      * @test
      */
-    public function isNotFizzDivisibleBy3(): void {
+    public function givenNumberNotDivisibleBy3ReturnsFizzFalse(): void {
         $divisibleChecker = $this->fizzBuzz->fizzDivisibleChecker(1);
 
         $this->assertFalse($divisibleChecker);
@@ -29,7 +29,7 @@ final class FizzBuzzTest extends TestCase
     /**
      * @test
      */
-    public function isFizzDivisibleBy3(): void{
+    public function givenNumberDivisibleBy3ReturnsFizzTrue(): void{
         $divisibleChecker = $this->fizzBuzz->fizzDivisibleChecker(3);
 
         $this->assertTrue($divisibleChecker);
@@ -38,7 +38,7 @@ final class FizzBuzzTest extends TestCase
     /**
      * @test
      */
-    public function isNotBuzzDivisibleBy5(): void{
+    public function givenNumberNotDivisibleBy5ReturnsBuzzFalse(): void{
         $divisibleChecker = $this->fizzBuzz->buzzDivisibleChecker(1);
 
         $this->assertFalse($divisibleChecker);
@@ -47,7 +47,7 @@ final class FizzBuzzTest extends TestCase
     /**
      * @test
      */
-    public function isBuzzDivisibleBy5(): void{
+    public function givenNumberDivisibleBy5ReturnsBuzzTrue(): void{
         $divisibleChecker = $this->fizzBuzz->buzzDivisibleChecker(5);
 
         $this->assertTrue($divisibleChecker);
@@ -56,7 +56,7 @@ final class FizzBuzzTest extends TestCase
     /**
      * @test
      */
-    public function isNotFizzBuzzDivisibleBy3And5(): void{
+    public function givenNumberNotDivisibleBy3And5ReturnsFizzBuzzFalse(): void{
         $divisibleChecker = $this->fizzBuzz->fizzBuzzDivisibleChecker(10);
 
         $this->assertFalse($divisibleChecker);
@@ -65,7 +65,7 @@ final class FizzBuzzTest extends TestCase
     /**
      * @test
      */
-    public function isFizzBuzzDivisibleBy3And5(): void{
+    public function givenNumberDivisibleBy3And5ReturnsFizzBuzzTrue(): void{
         $divisibleChecker = $this->fizzBuzz->fizzBuzzDivisibleChecker(15);
 
         $this->assertTrue($divisibleChecker);
@@ -74,7 +74,7 @@ final class FizzBuzzTest extends TestCase
     /**
      * @test
      */
-    public function isFizzReturnsFizz(): void{
+    public function givenNumberFizzReturnsFizzWord(): void{
         $convertChecker = $this->fizzBuzz->convert(3);
 
         $this->assertEquals('Fizz',$convertChecker);
@@ -84,7 +84,7 @@ final class FizzBuzzTest extends TestCase
     /**
      * @test
      */
-    public function isBuzzReturnsBuzz(): void{
+    public function givenNumberBuzzReturnsBuzzWord(): void{
         $convertChecker = $this->fizzBuzz->convert(5);
 
         $this->assertEquals('Buzz',$convertChecker);
@@ -93,7 +93,7 @@ final class FizzBuzzTest extends TestCase
     /**
      * @test
      */
-    public function isFizzBuzzReturnsFizzBuzz(): void{
+    public function givenNumberFizzBuzzReturnsFizzBuzzWord(): void{
         $convertChecker = $this->fizzBuzz->convert(15);
 
         $this->assertEquals('FizzBuzz',$convertChecker);
@@ -102,7 +102,7 @@ final class FizzBuzzTest extends TestCase
     /**
      * @test
      */
-    public function isNotFizzContains3(): void{
+    public function givenNumberNotContains3ReturnsFizzFalse(): void{
         $containsChecker = $this->fizzBuzz->fizzContainsChecker(12);
 
         $this->assertFalse($containsChecker);
@@ -111,7 +111,7 @@ final class FizzBuzzTest extends TestCase
     /**
      * @test
      */
-    public function isFizzContains3(): void{
+    public function givenNumberContains3ReturnsFizzTrue(): void{
         $containsChecker = $this->fizzBuzz->fizzContainsChecker(13);
 
         $this->assertTrue($containsChecker);
@@ -120,7 +120,7 @@ final class FizzBuzzTest extends TestCase
     /**
      * @test
      */
-    public function isNotBuzzContains5(): void{
+    public function givenNumberNotContains5ReturnsBuzzFalse(): void{
         $containsChecker = $this->fizzBuzz->buzzContainsChecker(12);
 
         $this->assertFalse($containsChecker);
@@ -129,7 +129,7 @@ final class FizzBuzzTest extends TestCase
     /**
      * @test
      */
-    public function isBuzzContains5(): void{
+    public function givenNumberContains5ReturnsBuzzTrue(): void{
         $containsChecker = $this->fizzBuzz->buzzContainsChecker(15);
 
         $this->assertTrue($containsChecker);

@@ -68,7 +68,6 @@ class FizzBuzz
      */
     public function fizzContainsChecker(int $number): bool{
         return str_contains($number, self::FIZZ_NUMBER);
-
     }
 
     /**
@@ -77,6 +76,5 @@ class FizzBuzz
      */
     public function buzzContainsChecker(int $number): bool{
         return str_contains($number, self::BUZZ_NUMBER);
-
     }
 }
